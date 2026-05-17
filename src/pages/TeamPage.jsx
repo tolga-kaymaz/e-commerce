@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { ChevronRight } from "lucide-react"
-import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react"
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa"
 
  import team1 from "../assets/images/team1.jpg"
 import team2 from "../assets/images/team2.jpg"
@@ -94,19 +94,19 @@ function TeamPage() {
                 <h3 className="text-lg font-bold text-[#252B42]">{member.name}</h3>
                 <p className="text-sm text-gray-500">{member.company}</p>
                 <div className="flex items-center gap-3 mt-2">
-                  <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                    <Facebook size={16} className="text-[#23A6F0] hover:opacity-75" />
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                    <Instagram size={16} className="text-[#23A6F0] hover:opacity-75" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                    <Twitter size={16} className="text-[#23A6F0] hover:opacity-75" />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                    <Linkedin size={16} className="text-[#23A6F0] hover:opacity-75" />
-                  </a>
-                </div>
+  <a href="https://facebook.com" target="_blank" rel="noreferrer">
+    <FaFacebook size={16} className="text-[#23A6F0] hover:opacity-75" />
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <FaInstagram size={16} className="text-[#23A6F0] hover:opacity-75" />
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noreferrer">
+    <FaTwitter size={16} className="text-[#23A6F0] hover:opacity-75" />
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+    <FaLinkedin size={16} className="text-[#23A6F0] hover:opacity-75" />
+  </a>
+</div>
               </div>
             </div>
           ))}
