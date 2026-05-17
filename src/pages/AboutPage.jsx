@@ -1,4 +1,5 @@
-import { Twitter, Facebook, Instagram, Play } from "lucide-react"
+import { Play } from "lucide-react"
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 
 import noneImg from "../assets/images/none.png"
 import videoImg from "../assets/images/video.png"
@@ -108,17 +109,17 @@ function AboutPage() {
               <img src={member.image} alt={member.name} className="w-full object-cover" />
               <h3 className="font-bold text-[#252B42] mt-2">{member.name}</h3>
               <p className="text-sm text-gray-500">{member.profession}</p>
-              <div className="flex items-center gap-3">
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                  <Facebook size={18} className="text-[#23A6F0]" />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                  <Instagram size={18} className="text-[#23A6F0]" />
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                  <Twitter size={18} className="text-[#23A6F0]" />
-                </a>
-              </div>
+             <div className="flex items-center gap-3">
+  <a href="https://facebook.com" target="_blank" rel="noreferrer">
+    <FaFacebook size={18} className="text-[#23A6F0]" />
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <FaInstagram size={18} className="text-[#23A6F0]" />
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noreferrer">
+    <FaTwitter size={18} className="text-[#23A6F0]" />
+  </a>
+</div>
             </div>
           ))}
         </div>
