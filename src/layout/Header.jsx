@@ -1,5 +1,5 @@
 import { Search, ShoppingCart, Heart, Menu, X } from "lucide-react"
-import { Instagram, Youtube, Facebook, Twitter } from "lucide-react"
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { useSelector } from "react-redux"
@@ -51,13 +51,13 @@ return (
           <span>michelle.rivera@example.com</span>
         </div>
         <span>Follow Us and get a chance to win 80% off</span>
-        <div className="flex gap-3 items-center">
-          <span>Follow Us</span>
-          <Instagram size={18} className="text-white cursor-pointer hover:text-gray-300" />
-          <Youtube size={18} className="text-white cursor-pointer hover:text-gray-300" />
-         <Facebook size={18} className="text-white cursor-pointer hover:text-gray-300" fill="white" />
-         <Twitter size={18} className="text-white cursor-pointer hover:text-gray-300" fill="white" />
-        </div>
+       <div className="flex gap-3 items-center">
+  <span>Follow Us</span>
+  <FaInstagram size={18} className="text-white cursor-pointer hover:text-gray-300" />
+  <FaYoutube size={18} className="text-white cursor-pointer hover:text-gray-300" />
+  <FaFacebook size={18} className="text-white cursor-pointer hover:text-gray-300" />
+  <FaTwitter size={18} className="text-white cursor-pointer hover:text-gray-300" />
+</div>
       </div>
 
       
