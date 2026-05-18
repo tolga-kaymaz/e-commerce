@@ -23,10 +23,10 @@ export const setRoles = (roles) => ({ type: SET_ROLES, payload: roles })
 export const setTheme = (theme) => ({ type: SET_THEME, payload: theme })
 export const setLanguage = (language) => ({ type: SET_LANGUAGE, payload: language })
 
-// Thunk - Roles'u sadece ihtiyaç halinde çek
+
 export const fetchRoles = () => async (dispatch, getState) => {
   const { roles } = getState().client
-  if (roles.length > 0) return // Zaten varsa tekrar çekme
+  if (roles.length > 0) return 
 
   try {
     const { default: axiosInstance } = await import("../../api/axios")
@@ -43,7 +43,7 @@ export const loginUser = (credentials, rememberMe) => async (dispatch) => {
   
   const { token, ...userInfo } = res.data
 
-  // Token'ı axios header'a ekle
+  
   axiosInstance.defaults.headers.common["Authorization"] = token
    
   dispatch(setUser({ ...userInfo, token }))
@@ -65,20 +65,19 @@ export const verifyToken = () => async (dispatch) => {
   try {
     const { default: axiosInstance } = await import("../../api/axios")
     
-    // Token'ı axios header'a ekle
+    
     axiosInstance.defaults.headers.common["Authorization"] = token
     
-    // Verify isteği at
+    
     const res = await axiosInstance.get("/verify")
     
-    // Kullanıcıyı store'a kaydet
+    
     dispatch(setUser({ ...res.data, token }))
     
-    // Token'ı yenile
     localStorage.setItem("token", token)
     
   } catch (err) {
-    // Token geçersizse temizle
+    
     localStorage.removeItem("token")
     delete axiosInstance.defaults.headers.common["Authorization"]
   }

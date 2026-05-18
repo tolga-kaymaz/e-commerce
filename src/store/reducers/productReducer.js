@@ -6,7 +6,7 @@ const initialState = {
   offset: 0,
   filter: "",
   sort: "",
-  fetchState: "NOT_FETCHED", // "NOT_FETCHED" | "FETCHING" | "FETCHED" | "FAILED"
+  fetchState: "NOT_FETCHED", 
   selectedProduct: null,
 }
 

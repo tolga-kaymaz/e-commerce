@@ -22,7 +22,7 @@ const loadState = () => {
   }
 }
 
-// localStorage'a state kaydet
+
 const saveState = (state) => {
   try {
     localStorage.setItem("cartState", JSON.stringify(state.shoppingCart))
@@ -35,7 +35,7 @@ const preloadedState = loadState()
 
 const store = createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger))
 
-// Her state değişiminde localStorage'a kaydet
+
 store.subscribe(() => {
   saveState(store.getState())
 })
