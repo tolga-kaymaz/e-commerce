@@ -1,6 +1,9 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
   ]
 }
